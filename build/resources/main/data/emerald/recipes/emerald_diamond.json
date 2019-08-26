@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#I#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:emerald"
+        },
+        "I": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "item": "emerald:emerald_diamond",
+        "count": 1
+    }
+}

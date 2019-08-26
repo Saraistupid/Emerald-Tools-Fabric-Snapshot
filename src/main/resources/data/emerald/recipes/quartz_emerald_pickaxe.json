@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#/#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "emerald:emerald_quartz"
+        },
+        "/": {
+            "item": "emerald:emerald_pickaxe"
+        }
+    },
+    "result": {
+        "item": "emerald:quartz_emerald_pickaxe",
+        "count": 1
+    }
+}

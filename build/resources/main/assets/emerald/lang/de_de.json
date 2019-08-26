@@ -1,0 +1,21 @@
+{
+  "item.emerald.emerald_sword": "Smaragdschwert",
+  "item.emerald.emerald_pickaxe": "Smaragdspitzhacke",
+  "item.emerald.emerald_axe": "Smaragdaxt",
+  "item.emerald.emerald_shovel": "Smaragdschaufel",
+  "item.emerald.emerald_helmet": "Smaragdhelm",
+  "item.emerald.emerald_chestplate": "Smaragdbrustpanzer",
+  "item.emerald.emerald_leggings": "Smaragdbeinschutz",
+  "item.emerald.emerald_boots": "Smaragdstiefel",
+  "item.emerald.emerald_apple": "Smaragdener Apfel ",
+  "item.emerald.emerald_bow": "Smaragdbogen",
+  "item.emerald.emerald_iron": "smaragdener Eisenbarren",
+  "item.emerald.iron_emerald_sword": "smaragdenes Eisenschwert",
+  "item.emerald.iron_emerald_pickaxe": "smaragdene Eisenspitzhacke",
+  "item.emerald.iron_emerald_axe": "smaragdene Eisenaxt",
+  "item.emerald.iron_emerald_shovel": "smaragdene Eisenschaufel",
+  "item.emerald.iron_emerald_helmet": "smaragdener Eisenhelm",
+  "item.emerald.iron_emerald_chestplate": "smaragdener Eisenbrustpanzer",
+  "item.emerald.iron_emerald_leggings": "smaragdener Eisenbeinschutz",
+  "item.emerald.iron_emerald_boots": "smaragdene Eisenstiefel"
+}

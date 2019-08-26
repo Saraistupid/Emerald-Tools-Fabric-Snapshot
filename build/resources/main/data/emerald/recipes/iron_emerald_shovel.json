@@ -1,0 +1,20 @@
+                                                                                                {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#/#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "emerald:emerald_iron"
+        },
+        "/": {
+            "item": "emerald:emerald_shovel"
+        }
+    },
+    "result": {
+        "item": "emerald:iron_emerald_shovel",
+        "count": 1
+    }
+}

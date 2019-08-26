@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "emerald",
+  "version": "1.8.1",
+
+  "name": "Emerald tools",
+  "description": "bla bla you know",
+  "authors": [
+    "E404NNF"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.e404nnf.emeraldtools.main.Main"
+    ]
+  },
+
+  "requires": {
+    "fabricloader": ">=0.4.8",
+    "fabric": "*"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

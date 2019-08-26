@@ -1,0 +1,154 @@
+---- Minecraft Profiler Results ----
+// *cracks redstone whip*
+
+Time span: 294 ms
+Tick span: 6 ticks
+// This is approximately 20.37 ticks per second. It should be 20 ticks per second
+
+--- BEGIN PROFILE DUMP ---
+
+[00] nextTickWait - 94.93%/94.93%
+[01] |   unspecified - 99.99%/95.71%
+[01] |   move - 0.01%/0.01%
+[01] |   rest - 0.00%/0.00%
+[00] tick - 5.07%/5.07%
+[01] |   levels - 69.84%/3.57%
+[02] |   |   New World minecraft:overworld - 85.30%/3.05%
+[03] |   |   |   tick - 98.94%/3.02%
+[04] |   |   |   |   chunkSource - 92.56%/2.79%
+[05] |   |   |   |   |   chunks - 95.76%/2.67%
+[06] |   |   |   |   |   |   pollingChunks - 98.66%/2.64%
+[07] |   |   |   |   |   |   |   unspecified - 78.95%/2.08%
+[07] |   |   |   |   |   |   |   spawner - 13.44%/0.35%
+[07] |   |   |   |   |   |   |   iceandsnow - 3.00%/0.08%
+[07] |   |   |   |   |   |   |   tickBlocks - 1.73%/0.05%
+[08] |   |   |   |   |   |   |   |   unspecified - 84.60%/0.04%
+[08] |   |   |   |   |   |   |   |   randomTick - 15.40%/0.01%
+[07] |   |   |   |   |   |   |   broadcast - 1.48%/0.04%
+[07] |   |   |   |   |   |   |   thunder - 0.84%/0.02%
+[07] |   |   |   |   |   |   |   customSpawners - 0.36%/0.01%
+[07] |   |   |   |   |   |   |   naturalSpawnCount - 0.19%/0.01%
+[06] |   |   |   |   |   |   unspecified - 1.34%/0.04%
+[05] |   |   |   |   |   purge - 3.61%/0.10%
+[05] |   |   |   |   |   unload - 0.32%/0.01%
+[06] |   |   |   |   |   |   unspecified - 55.46%/0.00%
+[06] |   |   |   |   |   |   chunk_unload - 29.20%/0.00%
+[06] |   |   |   |   |   |   poi - 15.34%/0.00%
+[05] |   |   |   |   |   unspecified - 0.31%/0.01%
+[04] |   |   |   |   entities - 5.42%/0.16%
+[05] |   |   |   |   |   regular - 53.29%/0.09%
+[06] |   |   |   |   |   |   tick - 87.16%/0.08%
+[07] |   |   |   |   |   |   |   minecraft:player - 54.36%/0.04%
+[07] |   |   |   |   |   |   |   unspecified - 43.64%/0.03%
+[07] |   |   |   |   |   |   |   chunkCheck - 2.00%/0.00%
+[06] |   |   |   |   |   |   unspecified - 12.84%/0.01%
+[06] |   |   |   |   |   |   remove - 0.00%/0.00%
+[05] |   |   |   |   |   blockEntities - 37.75%/0.06%
+[06] |   |   |   |   |   |   unspecified - 65.33%/0.04%
+[06] |   |   |   |   |   |   minecraft:campfire - 34.67%/0.02%
+[05] |   |   |   |   |   unspecified - 7.62%/0.01%
+[05] |   |   |   |   |   pendingBlockEntities - 0.76%/0.00%
+[05] |   |   |   |   |   global - 0.33%/0.00%
+[05] |   |   |   |   |   fabricWorldTick - 0.25%/0.00%
+[04] |   |   |   |   tickPending - 0.66%/0.02%
+[05] |   |   |   |   |   unspecified - 73.04%/0.01%
+[05] |   |   |   |   |   ticking - 8.99%/0.00%
+[05] |   |   |   |   |   selecting - 8.99%/0.00%
+[05] |   |   |   |   |   cleaning - 8.98%/0.00%
+[04] |   |   |   |   weather - 0.51%/0.02%
+[04] |   |   |   |   unspecified - 0.44%/0.01%
+[04] |   |   |   |   portalForcer - 0.24%/0.01%
+[04] |   |   |   |   raid - 0.07%/0.00%
+[04] |   |   |   |   village - 0.04%/0.00%
+[04] |   |   |   |   world border - 0.02%/0.00%
+[04] |   |   |   |   blockEvents - 0.02%/0.00%
+[03] |   |   |   timeSync - 0.83%/0.03%
+[03] |   |   |   unspecified - 0.23%/0.01%
+[02] |   |   New World minecraft:the_nether - 9.40%/0.34%
+[03] |   |   |   tick - 98.56%/0.33%
+[04] |   |   |   |   entities - 66.42%/0.22%
+[04] |   |   |   |   chunkSource - 15.22%/0.05%
+[05] |   |   |   |   |   chunks - 57.80%/0.03%
+[06] |   |   |   |   |   |   pollingChunks - 65.39%/0.02%
+[07] |   |   |   |   |   |   |   unspecified - 69.65%/0.01%
+[07] |   |   |   |   |   |   |   naturalSpawnCount - 21.70%/0.00%
+[07] |   |   |   |   |   |   |   customSpawners - 8.65%/0.00%
+[06] |   |   |   |   |   |   unspecified - 34.61%/0.01%
+[05] |   |   |   |   |   unload - 18.34%/0.01%
+[06] |   |   |   |   |   |   unspecified - 53.95%/0.00%
+[06] |   |   |   |   |   |   chunk_unload - 26.79%/0.00%
+[06] |   |   |   |   |   |   poi - 19.25%/0.00%
+[05] |   |   |   |   |   unspecified - 15.93%/0.01%
+[05] |   |   |   |   |   purge - 7.93%/0.00%
+[04] |   |   |   |   tickPending - 6.71%/0.02%
+[05] |   |   |   |   |   unspecified - 69.67%/0.02%
+[05] |   |   |   |   |   selecting - 13.01%/0.00%
+[05] |   |   |   |   |   cleaning - 10.53%/0.00%
+[05] |   |   |   |   |   ticking - 6.80%/0.00%
+[04] |   |   |   |   unspecified - 5.37%/0.02%
+[04] |   |   |   |   weather - 3.21%/0.01%
+[04] |   |   |   |   portalForcer - 1.50%/0.00%
+[04] |   |   |   |   raid - 0.54%/0.00%
+[04] |   |   |   |   village - 0.54%/0.00%
+[04] |   |   |   |   world border - 0.33%/0.00%
+[04] |   |   |   |   blockEvents - 0.16%/0.00%
+[03] |   |   |   unspecified - 0.91%/0.00%
+[03] |   |   |   timeSync - 0.53%/0.00%
+[02] |   |   New World minecraft:the_end - 3.22%/0.11%
+[03] |   |   |   tick - 97.48%/0.11%
+[04] |   |   |   |   entities - 50.18%/0.06%
+[04] |   |   |   |   chunkSource - 22.06%/0.02%
+[05] |   |   |   |   |   chunks - 50.25%/0.01%
+[06] |   |   |   |   |   |   pollingChunks - 69.94%/0.01%
+[07] |   |   |   |   |   |   |   unspecified - 73.47%/0.01%
+[07] |   |   |   |   |   |   |   naturalSpawnCount - 15.64%/0.00%
+[07] |   |   |   |   |   |   |   customSpawners - 10.88%/0.00%
+[06] |   |   |   |   |   |   unspecified - 30.06%/0.00%
+[05] |   |   |   |   |   unload - 22.86%/0.01%
+[06] |   |   |   |   |   |   unspecified - 58.78%/0.00%
+[06] |   |   |   |   |   |   poi - 26.68%/0.00%
+[06] |   |   |   |   |   |   chunk_unload - 14.54%/0.00%
+[05] |   |   |   |   |   unspecified - 19.11%/0.00%
+[05] |   |   |   |   |   purge - 7.77%/0.00%
+[04] |   |   |   |   unspecified - 12.93%/0.01%
+[04] |   |   |   |   tickPending - 10.10%/0.01%
+[05] |   |   |   |   |   unspecified - 78.23%/0.01%
+[05] |   |   |   |   |   ticking - 7.26%/0.00%
+[05] |   |   |   |   |   selecting - 7.26%/0.00%
+[05] |   |   |   |   |   cleaning - 7.26%/0.00%
+[04] |   |   |   |   weather - 2.46%/0.00%
+[04] |   |   |   |   portalForcer - 0.98%/0.00%
+[04] |   |   |   |   world border - 0.48%/0.00%
+[04] |   |   |   |   raid - 0.48%/0.00%
+[04] |   |   |   |   village - 0.24%/0.00%
+[04] |   |   |   |   blockEvents - 0.11%/0.00%
+[03] |   |   |   unspecified - 2.29%/0.00%
+[03] |   |   |   timeSync - 0.23%/0.00%
+[02] |   |   unspecified - 2.08%/0.07%
+[01] |   connection - 28.86%/1.48%
+[02] |   |   unspecified - 83.73%/1.24%
+[02] |   |   travel - 10.56%/0.16%
+[03] |   |   |   move - 58.72%/0.09%
+[03] |   |   |   unspecified - 24.46%/0.04%
+[03] |   |   |   rest - 16.82%/0.03%
+[02] |   |   entityBaseTick - 3.03%/0.04%
+[02] |   |   livingEntityBaseTick - 1.32%/0.02%
+[02] |   |   ai - 0.65%/0.01%
+[03] |   |   |   unspecified - 58.70%/0.01%
+[03] |   |   |   newAi - 41.30%/0.00%
+[02] |   |   push - 0.25%/0.00%
+[02] |   |   keepAlive - 0.24%/0.00%
+[02] |   |   headTurn - 0.15%/0.00%
+[02] |   |   jump - 0.06%/0.00%
+[02] |   |   rangeChecks - 0.01%/0.00%
+[01] |   unspecified - 0.81%/0.04%
+[01] |   commandFunctions - 0.34%/0.02%
+[02] |   |   unspecified - 80.41%/0.01%
+[02] |   |   minecraft:tick - 19.59%/0.00%
+[01] |   tallying - 0.05%/0.00%
+[01] |   players - 0.04%/0.00%
+[01] |   snooper - 0.02%/0.00%
+[01] |   server gui refresh - 0.02%/0.00%
+[01] |   fabricServerTick - 0.02%/0.00%
+--- END PROFILE DUMP ---
+

@@ -1,0 +1,125 @@
+---- Minecraft Crash Report ----
+// I just don't know what went wrong :(
+
+Time: 31/05/19 22:26
+Description: Batching chunks
+
+org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:521)
+	at net.fabricmc.loader.launch.knot.KnotClassDelegate.loadClassData(KnotClassDelegate.java:179)
+	at net.fabricmc.loader.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:142)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at net.minecraft.client.render.chunk.ChunkRenderer.makeChunkCacheOF(ChunkRenderer.java:774)
+	at net.minecraft.client.render.chunk.ChunkRenderer.rebuildChunk(ChunkRenderer.java:254)
+	at net.minecraft.client.render.chunk.ChunkRenderWorker.runTask(ChunkRenderWorker.java:80)
+	at net.minecraft.client.render.chunk.ChunkRenderWorker.run(ChunkRenderWorker.java:39)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [optifabric.indigofix.mixins.json:MixinChunkCacheOF] from phase [DEFAULT] in config [optifabric.indigofix.mixins.json] FAILED during APPLY
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.handleMixinError(MixinTransformer.java:779)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.handleMixinApplyError(MixinTransformer.java:732)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:513)
+	... 8 more
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Shadow field chunkCache was not located in the target class net.optifine.override.ChunkCacheOF. Using refmap OptiFabric-refmap.json
+	at org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.attachFields(MixinPreProcessorStandard.java:563)
+	at org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.attach(MixinPreProcessorStandard.java:266)
+	at org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.createContextFor(MixinPreProcessorStandard.java:244)
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.createContextFor(MixinInfo.java:1145)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:268)
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:353)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.apply(MixinTransformer.java:724)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.applyMixins(MixinTransformer.java:703)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:509)
+	... 8 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:521)
+	at net.fabricmc.loader.launch.knot.KnotClassDelegate.loadClassData(KnotClassDelegate.java:179)
+	at net.fabricmc.loader.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:142)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at net.minecraft.client.render.chunk.ChunkRenderer.makeChunkCacheOF(ChunkRenderer.java:774)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [ClientPlayerEntity['Player882'/1, l='MpServer', x=13.64, y=4.00, z=13.54]]
+	Chunk stats: MultiplayerChunkCache: 121, 49
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: {}
+	Level spawn location: World: (0,4,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 223210 game time, 3692 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: true), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Server brand: fabric
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.addDetailsToCrashReport(ClientWorld.java:547)
+	at net.minecraft.client.MinecraftClient.populateCrashReport(MinecraftClient.java:1923)
+	at net.minecraft.client.render.chunk.ChunkRenderWorker.run(ChunkRenderWorker.java:45)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.14.2
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_191, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 132729176 bytes (126 MB) / 637534208 bytes (608 MB) up to 947388416 bytes (903 MB)
+	JVM Flags: 0 total; 
+	Fabric Mods: 
+		emerald: Emerald tools 1.4.0
+		fabric: Fabric API 0.3.0+build.175
+		fabric-api-base: fabric-api-base 0.1.0+59147463
+		fabric-commands-v0: fabric-commands-v0 0.1.1+25fd0c52
+		fabric-containers-v0: fabric-containers-v0 0.1.2+25fd0c52
+		fabric-content-registries-v0: fabric-content-registries-v0 0.1.1+45e1a1c8
+		fabric-crash-report-info-v1: fabric-crash-report-info-v1 0.1.0+59147463
+		fabric-events-interaction-v0: fabric-events-interaction-v0 0.1.0+59147463
+		fabric-events-lifecycle-v0: fabric-events-lifecycle-v0 0.1.0+59147463
+		fabric-item-groups-v0: fabric-item-groups-v0 0.1.0+59147463
+		fabric-keybindings-v0: fabric-keybindings-v0 0.1.0+59147463
+		fabric-mining-levels-v0: fabric-mining-levels-v0 0.1.0+59147463
+		fabric-models-v0: fabric-models-v0 0.1.0+59147463
+		fabric-networking-blockentity-v0: fabric-networking-blockentity-v0 0.1.1+25fd0c52
+		fabric-networking-v0: fabric-networking-v0 0.1.2+200eb5c2
+		fabric-object-builders-v0: fabric-object-builders-v0 0.1.1+9fe2f882
+		fabric-registry-sync-v0: fabric-registry-sync-v0 0.2.1+4d26f9ba
+		fabric-renderer-api-v1: fabric-renderer-api-v1 0.1.0+02a46d5b
+		fabric-renderer-indigo: fabric-renderer-indigo 0.1.4+620b4d61
+		fabric-rendering-data-attachment-v1: fabric-rendering-data-attachment-v1 0.1.0+02a46d5b
+		fabric-rendering-fluids-v1: fabric-rendering-fluids-v1 0.1.0+dc4c57c2
+		fabric-rendering-v0: fabric-rendering-v0 0.1.0+59147463
+		fabric-resource-loader-v0: fabric-resource-loader-v0 0.1.1+59147463
+		fabric-tag-extensions-v0: fabric-tag-extensions-v0 0.1.0+59147463
+		fabric-textures-v0: fabric-textures-v0 0.1.4+792c1c35
+		fabricloader: Fabric Loader 0.4.8+build.154
+		mm: Manningham Mills 1.6
+		modmenu: Mod Menu 1.5.3-84
+		net_fabricmc_stitch: stitch 0.1.2.49+
+		optifabric: Optifabric 0.2.0
+		org_slf4j_slf4j-api: slf4j-api 1.7.26
+		org_slf4j_slf4j-simple: slf4j-simple 1.7.26
+		org_zeroturnaround_zt-zip: zt-zip 1.13
+	Launched Version: Fabric
+	LWJGL: 3.2.1 build 12
+	OpenGL: NO CONTEXT
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because EXT_framebuffer_object is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 2x Intel(R) Core(TM)2 Duo CPU E6750 @ 2.66GHz

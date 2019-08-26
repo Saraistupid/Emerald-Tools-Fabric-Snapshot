@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#/#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "emerald:emerald_iron"
+        },
+		"/":{
+		   "item": "emerald:emerald_leggings"
+		}
+    },
+    "result": {
+        "item": "emerald:iron_emerald_leggings",
+        "count": 1
+    }
+}
